@@ -1,0 +1,30 @@
+{
+  "name": "gooseberry-log",
+  "version": "1.0.0",
+  "description": "SMS Sending/Receiving",
+  "main": "Router.coffee",
+  "scripts": {
+    "start": "npm run watch & npm run livereload & npm run static",
+    "watch": "watchify -v -t coffeeify --debug --extension='.coffee' Router.coffee -o bundle.js",
+    "livereloadold": "livereloadify ./",
+    "livereload": "livereloadify --glob *.js ./",
+    "static": "./node_modules/node-static/bin/cli.js --port 8295 ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "backbone": "^1.2.3",
+    "browserify": "~13.0.0",
+    "chartist": "^0.9.7",
+    "chartjs": "^0.3.23",
+    "coffeeify": "^2.0.1",
+    "jquery": "^2.2.0",
+    "livereloadify": "^2.0.0",
+    "moment": "^2.13.0",
+    "node-static": "^0.7.7",
+    "pouchdb": "^5.2.0",
+    "uglifyjs": "~2.4.10",
+    "underscore": "^1.8.3",
+    "watchify": "^3.7.0"
+  }
+}
